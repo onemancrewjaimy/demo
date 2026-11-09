@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>R&amp;H Beers – ontwerpvoorstel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1F4E8C;
+  --blue-deep:#143563;
+  --steel:#D9DDE1;
+  --concrete:#8A8F93;
+  --signal:#F2B705;
+  --ink:#15202B;
+  --white:#FFFFFF;
+  --cond:"Barlow Condensed",system-ui,sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+h1,h2,h3{font-family:var(--cond);font-weight:700;line-height:1;letter-spacing:.005em}
+
+.demo-bar{background:var(--signal);color:var(--ink);font-size:13px;text-align:center;padding:8px 16px;font-weight:500}
+
+header{background:var(--white);border-bottom:1px solid var(--steel)}
+.nav{max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav img{height:46px;width:auto}
+.nav ul{list-style:none;display:flex;gap:28px;font-size:16px;font-weight:500}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--blue)}
+.nav .call{background:var(--blue);color:#fff;text-decoration:none;padding:10px 18px;font-weight:600;white-space:nowrap}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* hero with visible structural frame */
+.hero{position:relative;background:var(--blue-deep);color:#fff;overflow:hidden}
+.frame{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:calc((min(1240px,100vw) - 48px)/6) 100%;background-position:center;pointer-events:none}
+.hero-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(6,1fr);min-height:min(84vh,720px)}
+.hero-copy{grid-column:1 / span 3;padding:88px 32px 64px 0;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(48px,6.6vw,96px);text-transform:none}
+.hero p{font-size:19px;color:#c9d6e8;max-width:40ch;margin-top:22px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:14px 22px;font-weight:600;text-decoration:none}
+.btn-signal{background:var(--signal);color:var(--ink)}
+.btn-line{border:1px solid rgba(255,255,255,.5);color:#fff}
+.hero-photo{grid-column:4 / span 3;position:relative;margin:48px 0}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.since{position:absolute;left:-1px;bottom:-1px;background:var(--white);color:var(--blue);padding:16px 22px}
+.since b{font-family:var(--cond);font-size:56px;line-height:.9;display:block}
+.since span{font-size:14px;color:var(--ink)}
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;min-height:0}
+  .hero-copy{grid-column:1;padding:48px 0 32px}
+  .hero-photo{grid-column:1;min-height:300px;margin:0 0 40px}
+}
+
+section{padding:96px 24px}
+.wrap{max-width:1240px;margin:0 auto}
+h2{font-size:clamp(38px,4.4vw,60px);max-width:16ch}
+.lead{font-size:19px;color:#4b5560;max-width:58ch;margin-top:18px}
+
+.services .tiles{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--blue);border-left:1px solid var(--steel);margin-top:56px}
+.tile{padding:28px 24px 32px;border-right:1px solid var(--steel);border-bottom:1px solid var(--steel);min-height:200px;display:flex;flex-direction:column;gap:10px}
+.tile h3{font-size:28px;color:var(--blue)}
+.tile p{font-size:15px;color:#4b5560}
+@media (max-width:960px){.services .tiles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.services .tiles{grid-template-columns:1fr}}
+
+.factory{background:var(--steel)}
+.factory .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.factory img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:28px}
+.checks li{padding-left:22px;position:relative;font-weight:500}
+.checks li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;background:var(--blue)}
+.factory .btn{margin-top:28px;background:var(--blue);color:#fff}
+@media (max-width:860px){.factory .wrap{grid-template-columns:1fr}.checks{grid-template-columns:1fr}}
+
+.projects .list{columns:3;column-gap:40px;margin-top:48px;list-style:none}
+.projects .list li{break-inside:avoid;padding:12px 0;border-bottom:1px solid var(--steel);font-weight:500}
+@media (max-width:860px){.projects .list{columns:2}}
+@media (max-width:540px){.projects .list{columns:1}}
+.projects .note{margin-top:28px;color:#4b5560}
+
+.marks{background:var(--white);border-top:1px solid var(--steel);padding:48px 24px}
+.marks .wrap{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.marks .row{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.marks img{height:54px;width:auto}
+
+.contact{background:var(--ink);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.contact h2{color:#fff}
+.contact .phone{font-family:var(--cond);font-weight:700;font-size:clamp(42px,5vw,68px);text-decoration:none;display:inline-block;margin-top:24px;color:var(--signal)}
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 24px;font-size:18px}
+.contact dt{color:#8fa0b3}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:#0f1720;color:#7d8a98;font-size:13px;padding:24px;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Ontwerpvoorstel van BRAND-ON. Dit is niet de officiële website van Aannemersbedrijf R&amp;H Beers.</div>
+
+<header>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="#top"><img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/themes/rhbeers/images/HR-Beers_logo.svg" alt="Aannemersbedrijf R&amp;H Beers"></a>
+    <ul>
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#fabriek">Eigen fabriek</a></li>
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="call" href="tel:+31725711254">072 571 12 54</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="frame" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Bedrijfshallen, agrarische bouw en woningen</h1>
+        <p>Aannemersbedrijf uit Heerhugowaard met een eigen timmerfabriek, spuiterij en prefab-productie. Van idee tot oplevering in één hand.</p>
+        <div class="hero-actions">
+          <a class="btn btn-signal" href="#contact">Bespreek uw bouwplan</a>
+          <a class="btn btn-line" href="#projecten">Bekijk projecten</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/files/6916/2367/7294/RenH_Beers_Aannemersbedrijf-vrijstaande_woning-HiRes-5155.jpg" alt="Vrijstaande woning gebouwd door R&amp;H Beers">
+        <div class="since"><b>1903</b><span>Familiebedrijf, vijfde generatie</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="services" id="diensten">
+    <div class="wrap">
+      <h2>Wat we bouwen</h2>
+      <p class="lead">Van een koelcel voor een kweker tot een villa op eigen kavel. Al onze projecten liggen in Noord-Holland.</p>
+      <div class="tiles">
+        <div class="tile"><h3>Utiliteitsbouw</h3><p>Bedrijfspanden en kantoren, nieuwbouw en uitbreiding.</p></div>
+        <div class="tile"><h3>Agrarische bouw</h3><p>Schuren, loodsen en bedrijfsgebouwen voor tuinders en boeren.</p></div>
+        <div class="tile"><h3>Bedrijfshallen</h3><p>Hallen voor opslag, productie en werkplaats.</p></div>
+        <div class="tile"><h3>Koel- en vriescellen</h3><p>Bouw en renovatie van koel- en vriesruimtes.</p></div>
+        <div class="tile"><h3>Woningbouw</h3><p>Woningen en villa's, traditioneel of in houtskeletbouw.</p></div>
+        <div class="tile"><h3>Aan- en verbouw</h3><p>Aanbouw, verbouwing en renovatie van bestaande panden.</p></div>
+        <div class="tile"><h3>Dak- en gevelbeplating</h3><p>Nieuwe of gerenoveerde daken en gevels.</p></div>
+        <div class="tile"><h3>Betonwerk</h3><p>Funderingen en bedrijfsvloeren.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="factory" id="fabriek">
+    <div class="wrap">
+      <img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/files/6616/2408/5438/PHOTO-2020-03-14-13-00-58_6.jpg" alt="Prefab houtskeletbouw van R&amp;H Beers" loading="lazy">
+      <div>
+        <h2>Prefab uit onze eigen fabriek</h2>
+        <p class="lead">Sinds 2017 ontwerpen, produceren en monteren we houtskeletbouw-elementen volledig in eigen beheer, in Heerhugowaard. Minder werk op de bouwplaats, meer controle in de fabriek.</p>
+        <ul class="checks">
+          <li>Snelle bouwtijd</li><li>Droge bouwmethode</li>
+          <li>Hoge isolatiewaarden</li><li>Zeer flexibel</li>
+          <li>Minder arbeidskosten</li><li>Duurzaam</li>
+        </ul>
+        <a class="btn" href="https://rhbeers-prefab.nl/" rel="noopener">Naar R&amp;H Beers Prefab</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projecten">
+    <div class="wrap">
+      <h2>Een greep uit ruim 60 projecten</h2>
+      <ul class="list">
+        <li>Nieuwbouw 19 woningen De Nollen</li>
+        <li>Vakgarage Hink</li>
+        <li>Sandfirden kantoor</li>
+        <li>Sandfirden bedrijfshal</li>
+        <li>Gemeente Heerhugowaard bedrijfshal</li>
+        <li>Koel- en Vrieshuis Gebr. Van Langen</li>
+        <li>Bejo Zaden betonvloeren</li>
+        <li>Tuindersbedrijf C.J.M. Veldman</li>
+        <li>Gootjes-AllPlant</li>
+        <li>H.M. Tesselaar Alstroemeria</li>
+        <li>Dak- en gevelrenovatie bedrijfshal</li>
+        <li>Aanbouw familie Bakkum</li>
+      </ul>
+      <p class="note">Elk project krijgt in de volledige website een eigen pagina met foto's, in plaats van een menu met ruim 60 regels.</p>
+    </div>
+  </section>
+
+  <div class="marks">
+    <div class="wrap">
+      <div class="row">
+        <img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/files/7416/2306/2770/logo_Bouw-Garant.png" alt="Bouwgarant" loading="lazy">
+        <img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/files/1816/2306/2786/logo_Bouwend-NL.png" alt="Bouwend Nederland" loading="lazy">
+        <img referrerpolicy="no-referrer" src="https://www.rhbeers.nl/application/files/7316/2306/2778/logo_BCH.png" alt="BCH" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Bouwplannen? Wij denken graag met u mee.</h2>
+        <a class="phone" href="tel:+31725711254">072 571 12 54</a>
+      </div>
+      <dl>
+        <dt>Adres</dt><dd>Middenweg 494<br>1704 BM Heerhugowaard</dd>
+        <dt>E-mail</dt><dd><a href="mailto:info@rhbeers.nl">info@rhbeers.nl</a></dd>
+        <dt>Open</dt><dd>Ma t/m vr, 07:00 – 17:00</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>Ontwerpvoorstel door BRAND-ON (brand-on.org). Teksten en beeld afkomstig van rhbeers.nl.</footer>
+</body>
+</html>

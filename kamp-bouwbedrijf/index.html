@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kamp Bouwbedrijf – ontwerpvoorstel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --polder:#2F3B33;
+  --polder-deep:#1E2621;
+  --brick:#8E3B2E;
+  --stone:#C9C6BC;
+  --paper:#F6F7F4;
+  --ink:#1C1F1D;
+  --muted:#5D655F;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Public Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px}
+
+.demo-bar{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.demo-bar strong{font-weight:600}
+
+header{background:#fff;border-bottom:1px solid #e3e3df}
+.nav{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav img{height:52px;width:auto}
+.nav ul{list-style:none;display:flex;gap:28px;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .call{background:var(--polder);color:#fff;text-decoration:none;padding:10px 18px;border-radius:2px;font-weight:500;font-size:15px;white-space:nowrap}
+@media (max-width:860px){.nav ul{display:none}}
+
+.hero{position:relative;min-height:min(86vh,760px);display:grid;grid-template-columns:5fr 7fr;background:var(--polder-deep);color:#fff}
+.hero-text{padding:72px 48px 56px;display:flex;flex-direction:column;justify-content:space-between;gap:48px}
+.year{font-family:var(--serif);font-size:clamp(96px,14vw,200px);line-height:.85;font-weight:400;color:var(--stone);letter-spacing:-.02em}
+.year small{display:block;font-family:var(--sans);font-size:15px;letter-spacing:0;color:#aeb5af;margin-top:18px;line-height:1.4}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.4vw,46px);line-height:1.12;max-width:16ch}
+.hero p{color:#cfd4d0;max-width:44ch;margin-top:18px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 22px;text-decoration:none;font-weight:500;border-radius:2px}
+.btn-light{background:var(--paper);color:var(--ink)}
+.btn-line{border:1px solid #6d786f;color:#fff}
+.hero-img{position:relative}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img figcaption{position:absolute;right:16px;bottom:16px;background:rgba(30,38,33,.85);color:#e4e7e4;font-size:13px;padding:6px 10px}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-img{min-height:320px;order:-1}
+  .hero-text{padding:40px 20px}
+}
+
+section{padding:96px 24px}
+.wrap{max-width:1200px;margin:0 auto}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.2vw,44px);line-height:1.15;max-width:22ch}
+.lead{font-size:19px;color:var(--muted);max-width:60ch;margin-top:18px}
+
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.intro ul{list-style:none;border-top:1px solid var(--stone)}
+.intro li{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--stone);font-size:18px}
+.intro li span{color:var(--muted);font-size:15px;text-align:right}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:40px}}
+
+.projects{background:#fff}
+.projects .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:220px;gap:12px}
+.grid figure{position:relative;overflow:hidden;background:var(--stone)}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(20,26,22,.8));color:#fff;font-size:14px}
+.g1{grid-column:span 4;grid-row:span 2}
+.g2,.g3{grid-column:span 2}
+.g4,.g5,.g6{grid-column:span 2}
+@media (max-width:760px){
+  .grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .g1{grid-column:span 2;grid-row:span 2}
+  .g2,.g3,.g4,.g5,.g6{grid-column:span 1}
+}
+
+.history{background:var(--polder);color:#fff}
+.history h2{color:#fff}
+.history .lead{color:#c3cbc5}
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:56px;border-top:2px solid var(--stone)}
+.timeline li{padding:20px 18px 0 0;position:relative}
+.timeline li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--polder);border:2px solid var(--stone)}
+.timeline li.now::before{background:var(--brick);border-color:var(--brick)}
+.timeline b{font-family:var(--serif);font-size:30px;font-weight:500;display:block;color:var(--stone)}
+.timeline p{font-size:15px;color:#d7ddd8;margin-top:6px}
+@media (max-width:900px){
+  .timeline{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--stone);margin-left:6px}
+  .timeline li{padding:0 0 28px 28px}
+  .timeline li::before{top:10px;left:-8px}
+}
+
+.people .wrap{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:center}
+.people img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.marks{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.marks span{border:1px solid var(--stone);padding:7px 12px;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.people .wrap{grid-template-columns:1fr}}
+
+.contact{background:var(--polder-deep);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact h2{color:#fff}
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 24px;font-size:18px;margin-top:8px}
+.contact dt{color:#9aa49c}
+.contact a{color:#fff}
+.contact .big{font-family:var(--serif);font-size:clamp(28px,3vw,40px);text-decoration:none;display:inline-block;margin-top:24px;border-bottom:2px solid var(--brick)}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#8d958f;font-size:13px;padding:24px;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><strong>Ontwerpvoorstel van BRAND-ON.</strong> Dit is niet de officiële website van Kamp Bouwbedrijf.</div>
+
+<header>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="#top"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/logo-kamp.jpg" alt="Kamp Bouwbedrijf"></a>
+    <ul>
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#geschiedenis">Geschiedenis</a></li>
+      <li><a href="#werkwijze">Werkwijze</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="call" href="tel:0725714881">072 571 48 81</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="hero-text">
+      <div class="year">1872<small>Bouwbedrijf in Heerhugowaard,<br>vijfde generatie Kamp</small></div>
+      <div>
+        <h1>Nieuwbouw, verbouw en onderhoud uit één vaste hand</h1>
+        <p>Kleine en middelgrote projecten in woningbouw en utiliteitsbouw, van ontwerp en kostenraming tot oplevering.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#contact">Plan een kennismaking</a>
+          <a class="btn btn-line" href="#projecten">Bekijk projecten</a>
+        </div>
+      </div>
+    </div>
+    <figure class="hero-img">
+      <img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//nieuwbouw%20uitgeest%20schuurwoning/Uitgeest%20Schuurwoning%20Brummelhuis-08.jpg" alt="Nieuwgebouwde schuurwoning in Uitgeest">
+      <figcaption>Schuurwoning, Uitgeest</figcaption>
+    </figure>
+  </section>
+
+  <section class="intro" id="werkwijze">
+    <div class="wrap">
+      <div>
+        <h2>Een vaste aannemer, ook als het project klein is</h2>
+        <p class="lead">Wij denken mee vanaf de eerste schets. Ontwerp en tekenwerk kunnen we in eigen beheer doen, en u houdt tijdens de bouw één aanspreekpunt. Sinds 2024 zijn we onderdeel van de Thuis in Bouwen-groep: dezelfde mensen, met een 1300 m² inspiratiecentrum erbij.</p>
+      </div>
+      <ul>
+        <li>Nieuwbouw <span>woningen, modelwoningen op eigen kavel</span></li>
+        <li>Verbouw <span>aanbouw, dakopbouw, zolder</span></li>
+        <li>Renovatie <span>woning en bedrijfspand</span></li>
+        <li>Onderhoud <span>voor vaste contractpartijen</span></li>
+        <li>Utiliteitsbouw <span>scholen, praktijken, kantoren</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects" id="projecten">
+    <div class="wrap">
+      <div class="head">
+        <h2>Recent opgeleverd in de regio</h2>
+      </div>
+      <div class="grid">
+        <figure class="g1"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//nieuwbouw-horstkavel-buter/FotovanDana-LR-Middenweg145-1589.jpg" alt="Vrijstaande nieuwbouwwoning aan de Middenweg" loading="lazy"><figcaption>Nieuwbouw, Middenweg Heerhugowaard</figcaption></figure>
+        <figure class="g2"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//Braas%20Blankendaal%20tuinkamer/0Q0A3133.jpg" alt="Tuinkamer" loading="lazy"><figcaption>Tuinkamer</figcaption></figure>
+        <figure class="g3"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//nieuwbouw-schilder-visser-schuurwoning/FotovanDana-LR-7269.jpg" alt="Schuurwoning" loading="lazy"><figcaption>Schuurwoning</figcaption></figure>
+        <figure class="g4"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//VRNHN/ambulancepost,%20hoogkarspel%20%2831%29.jpg" alt="Ambulancepost Hoogkarspel" loading="lazy"><figcaption>Ambulancepost, Hoogkarspel</figcaption></figure>
+        <figure class="g5"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//nieuwbouw-kamp-heerhugowaard/FotovanDana-LR-Staartmeesstraat5-7896.jpg" alt="Nieuwbouwwoning in Heerhugowaard" loading="lazy"><figcaption>Nieuwbouw, Heerhugowaard</figcaption></figure>
+        <figure class="g6"><img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/original//Verbouw%20-%20Komen%20-%20A.%20de%20gelderlaan/BFTB20181020-2626.jpg" alt="Verbouwde woning" loading="lazy"><figcaption>Verbouw woning</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="history" id="geschiedenis">
+    <div class="wrap">
+      <h2>Vijf generaties, één adres aan de Middenweg</h2>
+      <p class="lead">Wat begon als timmermanswerkplaats naast de koeienstal, is uitgegroeid tot een bouwbedrijf dat Heerhugowaard en omstreken al ruim 150 jaar kent.</p>
+      <ol class="timeline">
+        <li><b>1872</b><p>Bernardus Kamp start een timmermansbedrijfje.</p></li>
+        <li><b>2e gen.</b><p>Jan Kamp bouwt verder en verkoopt 's avonds verzekeringen.</p></li>
+        <li><b>ca. 1948</b><p>Leo Kamp breidt bouwbedrijf en verzekeringskantoor uit.</p></li>
+        <li><b>1978</b><p>Co en Louis Kamp nemen de directie over.</p></li>
+        <li><b>2020</b><p>René en Isabel Kamp, de vijfde generatie, aan het roer.</p></li>
+        <li class="now"><b>2024</b><p>Onderdeel van de Thuis in Bouwen-groep.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="people">
+    <div class="wrap">
+      <img referrerpolicy="no-referrer" src="https://www.kampbouwbedrijf.nl/assets/img/userfiles/large//Personeel/KAMP%20Bouwbedrijf%20ThuisinBouwen-15.jpg" alt="Medewerkers van Kamp Bouwbedrijf" loading="lazy">
+      <div>
+        <h2>Eigen vakmensen, gecertificeerd</h2>
+        <p class="lead">Elke vakman heeft een VCA-certificaat en we zijn erkend leerbedrijf. Uw woning valt onder de garantieregelingen van Bouwgarant en Woningborg.</p>
+        <div class="marks">
+          <span>Bouwgarant</span><span>Woningborg</span><span>Bouwend Nederland</span><span>Velux-partner</span><span>Erkend leerbedrijf</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Bouwplannen? Kom langs aan de Middenweg.</h2>
+        <a class="big" href="tel:0725714881">072 571 48 81</a>
+      </div>
+      <dl>
+        <dt>Adres</dt><dd>Middenweg 275<br>1701 GD Heerhugowaard</dd>
+        <dt>E-mail</dt><dd><a href="mailto:info@thuisinbouwen.nl">info@thuisinbouwen.nl</a></dd>
+        <dt>Open</dt><dd>Ma t/m vr, 07:00 – 16:30</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>Ontwerpvoorstel door BRAND-ON (brand-on.org). Teksten en beeld afkomstig van kampbouwbedrijf.nl.</footer>
+</body>
+</html>

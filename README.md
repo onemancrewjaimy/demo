@@ -14,3 +14,6 @@ Alle demo's hebben een banner "Ontwerpvoorstel van BRAND-ON", staan op `noindex`
 
 | Map | Bedrijf | Plaats | Ronde | Status |
 |---|---|---|---|---|
+| [kamp-bouwbedrijf](kamp-bouwbedrijf/) | Kamp Bouwbedrijf | Heerhugowaard | 2026-11-09 | ter goedkeuring |
+| [ard-bruin](ard-bruin/) | Ard Bruin Aannemers- & Timmerbedrijf | Heiloo | 2026-11-09 | ter goedkeuring |
+| [rh-beers](rh-beers/) | Aannemersbedrijf R&H Beers | Heerhugowaard | 2026-11-09 | ter goedkeuring |
