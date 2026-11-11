@@ -14,6 +14,11 @@ Alle demo's hebben een banner "Ontwerpvoorstel van BRAND-ON", staan op `noindex`
 
 | Map | Bedrijf | Plaats | Ronde | Status |
 |---|---|---|---|---|
-| [kamp-bouwbedrijf](kamp-bouwbedrijf/) | Kamp Bouwbedrijf | Heerhugowaard | 2026-11-09 | ter goedkeuring |
-| [ard-bruin](ard-bruin/) | Ard Bruin Aannemers- & Timmerbedrijf | Heiloo | 2026-11-09 | ter goedkeuring |
-| [rh-beers](rh-beers/) | Aannemersbedrijf R&H Beers | Heerhugowaard | 2026-11-09 | ter goedkeuring |
+| [kamp-bouwbedrijf](kamp-bouwbedrijf/) | Kamp Bouwbedrijf | Heerhugowaard | 2026-11-09 | goedgekeurd |
+| [ard-bruin](ard-bruin/) | Ard Bruin Aannemers- & Timmerbedrijf | Heiloo | 2026-11-09 | goedgekeurd |
+| [rh-beers](rh-beers/) | Aannemersbedrijf R&H Beers | Heerhugowaard | 2026-11-09 | goedgekeurd |
+| [grand-cafe-de-smidse](grand-cafe-de-smidse/) | Grand Café De Smidse | Schagen | 2026-11-11 | ter goedkeuring |
+| [piet-pann](piet-pann/) | Café Piet Pann | Schagen | 2026-11-11 | ter goedkeuring |
+| [van-den-kommer](van-den-kommer/) | Installatieservice Van den Kommer | Winkel | 2026-11-11 | ter goedkeuring |
+| [admiraal-tuinvorming](admiraal-tuinvorming/) | Admiraal Tuinvorming | Akersloot | 2026-11-11 | ter goedkeuring |
+| [smit-en-smit](smit-en-smit/) | Smit & Smit Schilders | Alkmaar | 2026-11-11 | ter goedkeuring |

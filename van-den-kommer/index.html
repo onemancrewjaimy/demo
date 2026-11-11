@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Van den Kommer – ontwerpvoorstel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --flame:#E2471F;
+  --flame-dark:#B83412;
+  --graphite:#22272B;
+  --steel:#E7EAEC;
+  --white:#FFFFFF;
+  --muted:#5C646A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:"Rubik",system-ui,sans-serif;color:var(--graphite);background:var(--white);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flame);outline-offset:3px}
+h1,h2,h3{font-weight:900;line-height:1.02;letter-spacing:-.01em}
+
+.demo-bar{background:var(--graphite);color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+
+.alert{background:var(--flame);color:#fff}
+.alert .in{max-width:1200px;margin:0 auto;padding:10px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-weight:500}
+.alert a{font-weight:700;text-decoration:none;white-space:nowrap}
+
+.nav{max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:22px;line-height:1}
+.brand svg{width:34px;height:34px}
+.brand small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:3px}
+.nav ul{list-style:none;display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--flame)}
+@media (max-width:820px){.nav ul{display:none}}
+
+.hero{background:var(--steel)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,6.6vw,92px)}
+.hero h1 em{font-style:normal;color:var(--flame)}
+.hero p{font-size:20px;color:var(--muted);max-width:42ch;margin-top:20px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 22px;font-weight:700;text-decoration:none;border-radius:6px}
+.btn-flame{background:var(--flame);color:#fff}
+.btn-line{border:2px solid var(--graphite)}
+.clock{background:var(--graphite);color:#fff;border-radius:12px;padding:36px;text-align:center}
+.clock b{display:block;font-size:clamp(84px,11vw,140px);font-weight:900;line-height:.9;color:var(--flame)}
+.clock span{display:block;font-size:18px;margin-top:10px}
+.clock a{display:inline-block;margin-top:20px;font-size:26px;font-weight:700;text-decoration:none;border-bottom:3px solid var(--flame)}
+@media (max-width:860px){.hero-inner{grid-template-columns:1fr;padding:48px 24px}}
+
+section{padding:96px 24px}
+.wrap{max-width:1200px;margin:0 auto}
+h2{font-size:clamp(34px,4.4vw,58px);max-width:18ch}
+.lead{font-size:19px;color:var(--muted);max-width:58ch;margin-top:18px}
+
+.services .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.svc{border:2px solid var(--steel);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.svc h3{font-size:20px;font-weight:700}
+.svc p{font-size:15px;color:var(--muted)}
+.svc.main{border-color:var(--flame)}
+@media (max-width:960px){.services .grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.services .grid{grid-template-columns:1fr}}
+
+.story{background:var(--graphite);color:#fff}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story h2{color:#fff}
+.story .lead{color:#C4CACE}
+.quote{font-size:clamp(28px,3.4vw,44px);font-weight:900;line-height:1.1;color:var(--flame);margin-top:32px}
+.quote small{display:block;font-size:15px;font-weight:400;color:#C4CACE;margin-top:10px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;background:#333}
+@media (max-width:860px){.story .wrap{grid-template-columns:1fr}}
+
+.team .people{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.person{background:var(--steel);border-radius:10px;padding:28px}
+.person h3{font-size:26px}
+.person .role{color:var(--flame-dark);font-weight:700;font-size:15px;margin:4px 0 12px}
+.person p{color:var(--muted);font-size:16px}
+@media (max-width:860px){.team .people{grid-template-columns:1fr}}
+
+.marks{border-top:1px solid var(--steel);padding:40px 24px}
+.marks .row{max-width:1200px;margin:0 auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.marks img{height:56px;width:auto}
+
+.contact{background:var(--flame);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.contact h2{color:#fff}
+.contact .phone{font-size:clamp(42px,6vw,80px);font-weight:900;text-decoration:none;display:inline-block;margin-top:20px}
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 24px;font-size:18px}
+.contact dt{color:#FFD9CC}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--graphite);color:#9BA3A9;font-size:13px;padding:24px;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Ontwerpvoorstel van BRAND-ON. Dit is niet de officiële website van Installatieservice Van den Kommer.</div>
+
+<div class="alert"><div class="in"><span>Storing? Wij staan 24 uur per dag voor u klaar.</span><a href="tel:0224542555">Bel 0224 54 25 55</a></div></div>
+
+<header>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#E2471F" d="M16 2c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 0 3 1 5 3 5-1-4 0-9 1-12z"/></svg>
+      <span>Van den Kommer<small>Installatieservice</small></span>
+    </a>
+    <ul>
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#verhaal">Over ons</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="hero-inner">
+      <div>
+        <h1>Service met een lach, <em>24 uur per dag</em></h1>
+        <p>Allround installatiebedrijf uit Winkel voor cv, warmtepompen, elektra, sanitair en dakwerk. Voor particulieren en bedrijven in Hollands Kroon en Schagen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-flame" href="tel:0224542555">Bel direct</a>
+          <a class="btn btn-line" href="#diensten">Bekijk diensten</a>
+        </div>
+      </div>
+      <div class="clock">
+        <b>24/7</b>
+        <span>Geen storing is ons te veel, geen tijdstip te gek.</span>
+        <a href="tel:0224542555">0224 54 25 55</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="diensten">
+    <div class="wrap">
+      <h2>Alles voor stroom, warmte en comfort</h2>
+      <p class="lead">Van een nieuwe cv-ketel tot een verstopte afvoer. Wij installeren, onderhouden en lossen storingen op.</p>
+      <div class="grid">
+        <div class="svc main"><h3>Cv-installaties</h3><p>Plaatsen, vervangen en onderhouden. Erkend dealer van verschillende merken.</p></div>
+        <div class="svc main"><h3>Warmtepompen</h3><p>Bodemwarmte benutten: voordelig én duurzaam.</p></div>
+        <div class="svc main"><h3>Elektrotechniek</h3><p>Al ruim 15 jaar onderdeel van ons werk.</p></div>
+        <div class="svc main"><h3>Rioolreiniging</h3><p>Een niet-werkende afvoer lossen we zo snel mogelijk op.</p></div>
+        <div class="svc"><h3>Airconditioning</h3><p>Koeltechnisch erkend.</p></div>
+        <div class="svc"><h3>Sanitair</h3><p>Installeren en vervangen.</p></div>
+        <div class="svc"><h3>Dak- en zinkwerk</h3><p>Ook traditioneel zink- en koperwerk.</p></div>
+        <div class="svc"><h3>Onderhoudsabonnement</h3><p>Vast onderhoud voor uw installatie.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="verhaal">
+    <div class="wrap">
+      <div>
+        <h2>Sinds 1999 een vertrouwd adres in Winkel</h2>
+        <p class="lead">Ted van den Kommer startte de zaak op 1 december 1999. Hij werkt in het vak sinds zijn zestiende, eerst in grote ketelhuizen en de utiliteitsbouw, later als servicemonteur. Nog steeds volgt hij cursussen om bij te blijven.</p>
+        <p class="quote">"Voor mijn klanten ga ik door het vuur!"<small>De eerste slogan van het bedrijf, met een vlam als logo.</small></p>
+      </div>
+      <div class="photos">
+        <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/6_400.jpg" alt="Team van Installatieservice Van den Kommer" loading="lazy">
+        <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/65_org.jpg" alt="Aan het werk bij Van den Kommer" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="wrap">
+      <h2>Een klein team, korte lijnen</h2>
+      <div class="people">
+        <div class="person"><h3>Ted</h3><p class="role">Eigenaar en installateur</p><p>Erkend leermeester, met alle branchediploma's op zak.</p></div>
+        <div class="person"><h3>Henk</h3><p class="role">Werkplaats en zinkwerk</p><p>Ted's vader. Specialist in traditioneel zink- en koperwerk en springt bij als het druk is.</p></div>
+        <div class="person"><h3>Tim</h3><p class="role">Hulpmonteur</p><p>Assisteert bij installaties en onderhoud.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marks">
+    <div class="row">
+      <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/91_org.png" alt="Lid van Uneto-VNI" loading="lazy">
+      <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/96_org.jpg" alt="VCA" loading="lazy">
+      <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/92_org.png" alt="SEI" loading="lazy">
+      <img referrerpolicy="no-referrer" src="https://www.installatievdk.nl/content/884/pages/clnt/90_org.png" alt="Koudetechnisch erkend" loading="lazy">
+    </div>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Storing of offerte? Bel ons.</h2>
+        <a class="phone" href="tel:0224542555">0224 54 25 55</a>
+      </div>
+      <dl>
+        <dt>Adres</dt><dd>Winkelerzand 35<br>1731 LR Winkel</dd>
+        <dt>E-mail</dt><dd><a href="mailto:info@installatievdk.nl">info@installatievdk.nl</a></dd>
+        <dt>Storing</dt><dd>24 uur per dag bereikbaar</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>Ontwerpvoorstel door BRAND-ON (brand-on.org). Teksten en beeld afkomstig van installatievdk.nl.</footer>
+</body>
+</html>
