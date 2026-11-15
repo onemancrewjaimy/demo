@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Autobedrijf van Bekkum – ontwerpvoorstel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@75..150,500..900&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#24272B;
+  --asphalt-2:#33373C;
+  --plate:#F4C20D;
+  --eu:#1D3E96;
+  --concrete:#E6E7E4;
+  --white:#FFFFFF;
+  --ink:#1D2023;
+  --muted:#5C6166;
+  --display:"Anybody",system-ui,sans-serif;
+  --text:"Red Hat Text",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--text);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--plate);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);line-height:.98;font-stretch:125%;font-weight:800;letter-spacing:-.01em}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+
+.demo-bar{background:#000;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+
+header{background:var(--asphalt);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px}
+.nav img{height:48px;width:auto}
+.nav ul{list-style:none;display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none;color:#C9CCCF}
+.nav ul a:hover{color:#fff}
+.call{background:var(--plate);color:var(--ink);text-decoration:none;padding:10px 18px;border-radius:4px;font-weight:700;font-size:15px;white-space:nowrap}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* Hero met kentekenplaat als herkenbaar element */
+.hero{background:var(--asphalt);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:80px}
+.plate{display:inline-flex;align-items:stretch;border:3px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--plate);color:var(--ink);font-family:var(--display);font-stretch:110%;font-weight:800;font-size:22px;box-shadow:0 0 0 2px var(--plate)}
+.plate .nl{background:var(--eu);color:#fff;font-size:13px;display:flex;align-items:flex-end;padding:4px 7px}
+.plate .txt{padding:6px 16px;letter-spacing:.06em}
+.hero h1{font-size:clamp(48px,7vw,104px);margin-top:28px}
+.hero p{font-size:19px;color:#C9CCCF;max-width:42ch;margin-top:22px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{display:inline-block;padding:15px 24px;border-radius:4px;font-weight:700;text-decoration:none}
+.btn-plate{background:var(--plate);color:var(--ink)}
+.btn-plate:hover{background:#FFD43B}
+.btn-ghost{border:2px solid #6B7076;color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.hero-img{border-radius:6px;overflow:hidden;aspect-ratio:4/3;background:var(--asphalt-2)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* Openingsstatus */
+.status{background:var(--plate);color:var(--ink)}
+.status .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;padding-top:14px;padding-bottom:14px;font-weight:500}
+.status strong{font-family:var(--display);font-stretch:110%;font-size:19px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ink);margin-right:8px;vertical-align:middle}
+.dot.open{background:#1F8A3B}
+
+section{padding:96px 0}
+h2{font-size:clamp(36px,4.6vw,62px);max-width:16ch}
+.lead{font-size:19px;color:var(--muted);max-width:56ch;margin-top:18px}
+
+/* Drie manieren om te rijden */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;background:var(--concrete);border:2px solid var(--concrete)}
+.way{background:var(--white);padding:32px 28px}
+.way h3{font-size:30px}
+.way p{color:var(--muted);margin-top:12px}
+@media (max-width:860px){.ways{grid-template-columns:1fr}}
+.brands{margin-top:56px}
+.brands p{color:var(--muted);font-size:15px}
+.brands ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:10px;font-family:var(--display);font-stretch:100%;font-weight:700;font-size:22px}
+
+/* Werkplaats */
+.shop{background:var(--concrete)}
+.shop .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.shop img.photo{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover;background:#CFD1CD}
+.checks{list-style:none;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.checks li{padding-left:28px;position:relative;font-weight:500}
+.checks li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;background:var(--plate);border:2px solid var(--ink);border-radius:3px}
+.rdw{display:flex;gap:16px;align-items:center;margin-top:32px;color:var(--muted);font-size:15px}
+.rdw img{width:110px;border-radius:4px}
+@media (max-width:860px){.shop .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* Contact */
+.contact{background:var(--asphalt);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px}
+.contact .lead{color:#C9CCCF}
+.phone{display:inline-block;margin-top:24px;font-family:var(--display);font-stretch:125%;font-weight:800;font-size:clamp(38px,5vw,64px);color:var(--plate);text-decoration:none}
+.phone:hover{text-decoration:underline}
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 24px;font-size:17px;margin-top:28px}
+.contact dt{color:#9DA2A7}
+table{width:100%;border-collapse:collapse;font-size:17px}
+caption{text-align:left;font-family:var(--display);font-stretch:110%;font-weight:800;font-size:26px;margin-bottom:12px}
+th,td{padding:12px 0;border-bottom:1px solid #464B51;text-align:left;font-weight:400}
+td{text-align:right}
+tr.today th,tr.today td{color:var(--plate);font-weight:700}
+.note{color:#9DA2A7;font-size:15px;margin-top:14px}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{color:var(--muted);font-size:13px;padding:24px;text-align:center}
+</style>
+</head>
+<body>
+<div class="demo-bar">Ontwerpvoorstel van BRAND-ON. Dit is niet de officiële website van Autobedrijf van Bekkum.</div>
+<header>
+  <nav class="nav wrap" aria-label="Hoofdmenu">
+    <a href="#top"><img referrerpolicy="no-referrer" src="https://autobedrijfvanbekkum.nl/wp-content/uploads/2022/10/avb-logo-2023.webp" alt="Autobedrijf van Bekkum"></a>
+    <ul>
+      <li><a href="#aanbod">Aanbod</a></li>
+      <li><a href="#werkplaats">Werkplaats</a></li>
+      <li><a href="#contact">Openingstijden</a></li>
+    </ul>
+    <a class="call" href="tel:0725052001">072 505 20 01</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <span class="plate" aria-label="Rijksweg 49a, Limmen"><span class="nl">NL</span><span class="txt">LIMMEN 49-A</span></span>
+        <h1>Groot in kleine bedrijfs&shy;wagens</h1>
+        <p>Gebruikte bedrijfswagens en personenauto's voor elk budget. Elke auto wordt afgeleverd met nieuwe APK en garantie.</p>
+        <div class="actions">
+          <a class="btn btn-plate" href="https://autobedrijfvanbekkum.nl/voorraad/">Bekijk de voorraad</a>
+          <a class="btn btn-ghost" href="https://wa.me/31681565702">App ons via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img referrerpolicy="no-referrer" src="https://autobedrijfvanbekkum.nl/wp-content/uploads/2022/11/avb-slider003.webp" alt="Bedrijfswagen bij Autobedrijf van Bekkum">
+      </div>
+    </div>
+  </section>
+
+  <div class="status" aria-live="polite">
+    <div class="wrap">
+      <span id="open-status"><span class="dot"></span><strong>Showroom Rijksweg 49a</strong></span>
+      <span>Altijd een verkoper aanwezig voor advies</span>
+      <span>Buiten openingstijden op afspraak</span>
+    </div>
+  </div>
+
+  <section id="aanbod">
+    <div class="wrap">
+      <h2>Kopen, per maand of leasen</h2>
+      <p class="lead">Al jarenlang een begrip in de regio. We hebben altijd ruime keuze in personenauto's en bedrijfswagens, voor een krappe en voor een ruime beurs.</p>
+      <div class="ways">
+        <div class="way"><h3>Kopen</h3><p>Scherpe prijzen, deskundig advies en een proefrit wanneer het u uitkomt. Uw huidige auto nemen we graag in.</p></div>
+        <div class="way"><h3>Per maand</h3><p>Liever niet alles in één keer? Uw auto of bedrijfswagen kunt u ook in maandelijkse termijnen betalen.</p></div>
+        <div class="way"><h3>Leasen</h3><p>Voor ondernemers hebben we een aparte leasevoorraad. Vraag naar de mogelijkheden voor uw bedrijf.</p></div>
+      </div>
+      <div class="brands">
+        <p>Onder andere in de voorraad</p>
+        <ul>
+          <li>Volkswagen</li><li>Renault</li><li>Opel</li><li>Mercedes-Benz</li><li>Ford</li><li>Fiat</li><li>Peugeot</li><li>Citroën</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="werkplaats">
+    <div class="wrap">
+      <img class="photo" referrerpolicy="no-referrer" loading="lazy" src="https://autobedrijfvanbekkum.nl/wp-content/uploads/2022/11/index-onderhoud.webp" alt="Werkplaats van Autobedrijf van Bekkum">
+      <div>
+        <h2>Uw auto in vertrouwde handen</h2>
+        <p class="lead">Ook als u uw auto niet bij ons kocht, bent u welkom in onze moderne werkplaats. De beste service voor een eerlijke prijs.</p>
+        <ul class="checks">
+          <li>APK-keuring</li><li>Onderhoud</li><li>Storingen</li><li>Schadeherstel</li>
+        </ul>
+        <div class="rdw">
+          <img referrerpolicy="no-referrer" loading="lazy" src="https://autobedrijfvanbekkum.nl/wp-content/uploads/2022/11/rdw-300x144.jpg" alt="RDW erkend">
+          <span>RDW-erkend. Werkplaatsbezoek altijd op afspraak.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Langskomen of even bellen</h2>
+        <p class="lead">Makkelijk bereikbaar aan de Rijksweg in Limmen.</p>
+        <a class="phone" href="tel:0725052001">072 505 20 01</a>
+        <dl>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/31681565702">06 81 56 57 02</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:info@autobedrijfvanbekkum.nl">info@autobedrijfvanbekkum.nl</a></dd>
+          <dt>Adres</dt><dd>Rijksweg 49a, 1906 BD Limmen</dd>
+          <dt>KvK</dt><dd>35026587</dd>
+        </dl>
+      </div>
+      <div>
+        <table>
+          <caption>Openingstijden</caption>
+          <tbody id="hours">
+            <tr data-d="1"><th scope="row">Maandag</th><td>10:00 – 17:00</td></tr>
+            <tr data-d="2"><th scope="row">Dinsdag</th><td>10:00 – 17:00</td></tr>
+            <tr data-d="3"><th scope="row">Woensdag</th><td>10:00 – 17:00</td></tr>
+            <tr data-d="4"><th scope="row">Donderdag</th><td>10:00 – 17:00</td></tr>
+            <tr data-d="5"><th scope="row">Vrijdag</th><td>10:00 – 17:00</td></tr>
+            <tr data-d="6"><th scope="row">Zaterdag</th><td>09:00 – 13:00</td></tr>
+            <tr data-d="0"><th scope="row">Zondag</th><td>Gesloten</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Andere tijden op afspraak.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Ontwerpvoorstel door BRAND-ON (brand-on.org). Teksten en beeld afkomstig van autobedrijfvanbekkum.nl.</footer>
+<script>
+(function(){
+  var h={1:[10,17],2:[10,17],3:[10,17],4:[10,17],5:[10,17],6:[9,13]};
+  var now=new Date(), d=now.getDay(), t=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.classList.add('today');
+  var open=h[d]&&t>=h[d][0]&&t<h[d][1];
+  var el=document.getElementById('open-status');
+  el.querySelector('.dot').classList.toggle('open',!!open);
+  el.querySelector('strong').textContent=open?'Nu open tot '+h[d][1]+':00':'Nu gesloten';
+})();
+</script>
+</body>
+</html>

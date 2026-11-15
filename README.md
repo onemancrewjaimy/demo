@@ -22,3 +22,6 @@ Alle demo's hebben een banner "Ontwerpvoorstel van BRAND-ON", staan op `noindex`
 | [van-den-kommer](van-den-kommer/) | Installatieservice Van den Kommer | Winkel | 2026-11-11 | ter goedkeuring |
 | [admiraal-tuinvorming](admiraal-tuinvorming/) | Admiraal Tuinvorming | Akersloot | 2026-11-11 | ter goedkeuring |
 | [smit-en-smit](smit-en-smit/) | Smit & Smit Schilders | Alkmaar | 2026-11-11 | ter goedkeuring |
+| [ton-dekker-tuinaanleg](ton-dekker-tuinaanleg/) | Ton Dekker Tuinaanleg & Onderhoud | Heiloo | 2026-11-15 | ter goedkeuring |
+| [iris-hoveniers](iris-hoveniers/) | Van Gogh's Iris Hoveniers | Heiloo | 2026-11-15 | ter goedkeuring |
+| [van-bekkum-autos](van-bekkum-autos/) | Autobedrijf van Bekkum | Limmen | 2026-11-15 | ter goedkeuring |
