@@ -25,3 +25,5 @@ Alle demo's hebben een banner "Ontwerpvoorstel van BRAND-ON", staan op `noindex`
 | [ton-dekker-tuinaanleg](ton-dekker-tuinaanleg/) | Ton Dekker Tuinaanleg & Onderhoud | Heiloo | 2026-11-15 | ter goedkeuring |
 | [iris-hoveniers](iris-hoveniers/) | Van Gogh's Iris Hoveniers | Heiloo | 2026-11-15 | ter goedkeuring |
 | [van-bekkum-autos](van-bekkum-autos/) | Autobedrijf van Bekkum | Limmen | 2026-11-15 | ter goedkeuring |
+| [schilder-bolten](schilder-bolten/) | Schilder Bolten | Limmen | 2026-11-15 | ter goedkeuring |
+| [fencer-schilders](fencer-schilders/) | Fencer Schilders | Heiloo | 2026-11-15 | ter goedkeuring |
